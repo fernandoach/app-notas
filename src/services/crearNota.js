@@ -1,4 +1,4 @@
-import { getConnection } from "../db/context.js"
+import { getConnection } from '../db/context.js'
 import mssql from 'mssql'
 
 const crearNota = async (titulo, descripcion, img, prioridad, acceso, usuarioId) => {
@@ -17,8 +17,10 @@ const crearNota = async (titulo, descripcion, img, prioridad, acceso, usuarioId)
         VALUES(@titulo, @descripcion, @img, @prioridad, @acceso, @usuarioId);
       `
       )
+    return queryResult
   } catch (error) {
-    
+    console.log(error)
+    return error
   }
 }
 
