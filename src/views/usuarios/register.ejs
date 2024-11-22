@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Crear nuevo usuario</h1>
+  <form action="/usuarios/register" method="post">
+    <div>
+      <label for="nombreCompleto">Nombre</label>
+      <input type="text" name="nombreCompleto" id="nombreCompleto">
+    </div>
+    <div>
+      <label for="genero">Género</label>
+      <select name="genero" id="genero">
+        <option value=""> --- Selecciona tu género --- </option>
+        <option value="M">Masculino</option>
+        <option value="F">Femenino</option>
+      </select>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </div>
+    <div>
+      <label for="passwd">Contraseña</label>
+      <input type="password" name="passwd" id="passwd">
+    </div>
+    <div>
+      <label for="repasswd">Repetir contraseña</label>
+      <input type="password" name="repasswd" id="repasswd">
+    </div>
+    <div>
+      <button type="submit">Crear</button>
+      <a href="/">Cancelar</a>
+    </div>
+  </form>
+</body>
+</html>
